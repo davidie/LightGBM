@@ -124,7 +124,7 @@ else
     cmake "${CMAKE_OPTS[@]}" ..
 fi
 
-make _lightgbm -j4 || exit -1
+make -j4 || exit -1
 
 cd $BUILD_DIRECTORY/python-package && python setup.py install --precompile --user || exit -1
 pytest $BUILD_DIRECTORY/tests || exit -1
